@@ -1,0 +1,23 @@
+<!-- myapp/templates/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario GET y POST</title>
+</head>
+<body>
+    <h1>Formulario de ejemplo</h1>
+
+    <h2>GET</h2>
+    <form method="get" action="/home/">
+        <input type="text" name="nombre" placeholder="Tu nombre">
+        <button type="submit">Enviar GET</button>
+    </form>
+
+    <h2>POST</h2>
+    <form method="post" action="/home/">
+        {% csrf_token %}
+        <input type="text" name="nombre" placeholder="Tu nombre">
+        <button type="submit">Enviar POST</button>
+    </form>
+</body>
+</html>
